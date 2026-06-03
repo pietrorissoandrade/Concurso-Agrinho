@@ -1,23 +1,24 @@
 const curiosidades = [
 
-"Os drones conseguem identificar pragas rapidamente.",
+"🌱 Um drone agrícola consegue mapear uma plantação inteira em poucos minutos.",
 
-"A IA ajuda agricultores a economizar água.",
+"💧 A irrigação inteligente pode economizar até 50% de água em algumas culturas.",
 
-"A agricultura de precisão reduz impactos ambientais.",
+"☀️ Muitas fazendas brasileiras já produzem sua própria energia por meio de painéis solares.",
 
-"Sensores inteligentes analisam a qualidade do solo.",
+"🤖 Sistemas de IA conseguem prever pragas antes mesmo que elas se espalhem.",
 
-"A tecnologia aumenta a produção de alimentos com sustentabilidade."
+"📡 Sensores conectados à internet permitem acompanhar a saúde do solo em tempo real.",
+
+"🚜 Tratores autônomos já são utilizados em diversos países para aumentar a eficiência agrícola."
 
 ];
 
 function gerarCuriosidade(){
 
-const numero =
-Math.floor(Math.random() * curiosidades.length);
+const numero = Math.floor(Math.random() * curiosidades.length);
 
-document.getElementById("curiosidade").innerHTML =
+document.getElementById("resultado").innerHTML =
 curiosidades[numero];
 
 }
