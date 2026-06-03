@@ -111,3 +111,42 @@ background:#1b5e20;
 color:white;
 padding:30px;
 }
+
+#chatbot{
+    text-align:center;
+    background:white;
+}
+
+#chatbot input{
+
+    width:80%;
+    max-width:600px;
+
+    padding:15px;
+
+    margin:20px 0;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:1rem;
+}
+
+#resposta{
+
+    margin-top:20px;
+
+    max-width:700px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    background:#eef8ee;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    font-size:1.1rem;
+}
