@@ -1,79 +1,149 @@
+```html
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agrinho 2026</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Sustentável: Tecnologia para o Futuro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-  <h1>Tecnologia e Sustentabilidade no Agro</h1>
-  <p>Inovações que transformam o campo e preservam o planeta</p>
+    <h1>🌱 Agro Sustentável: Tecnologia para o Futuro</h1>
+    <p>Inovação, produtividade e preservação ambiental caminhando juntas.</p>
 </header>
 
+<nav>
+    <a href="#tecnologias">Tecnologias</a>
+    <a href="#videos">Vídeos</a>
+    <a href="#pesquisas">Pesquisas</a>
+    <a href="#ia">IA Curiosidades</a>
+</nav>
+
 <section class="banner">
-  <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854" alt="Agro">
+    <h2>O Agro do Futuro Já Chegou</h2>
+    <p>
+        Drones, sensores inteligentes, energia renovável e inteligência artificial
+        estão transformando a agricultura em uma atividade mais eficiente e sustentável.
+    </p>
 </section>
 
-<section class="cards">
-  <div class="card">
-    <h2>Drones Agrícolas</h2>
-    <p>Monitoram plantações e reduzem desperdícios.</p>
-  </div>
+<section id="tecnologias">
+    <h2>🚜 Tecnologias Sustentáveis no Agro</h2>
 
-  <div class="card">
-    <h2>Inteligência Artificial</h2>
-    <p>A IA ajuda produtores a tomar decisões mais eficientes.</p>
-  </div>
+    <div class="cards">
 
-  <div class="card">
-    <h2>Irrigação Inteligente</h2>
-    <p>Economia de água e aumento da produtividade.</p>
-  </div>
+        <div class="card">
+            <img src="imagens/drone.jpg">
+            <h3>Drones Agrícolas</h3>
+            <p>
+                Monitoram plantações, identificam pragas e reduzem o uso excessivo
+                de defensivos.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/sensor.jpg">
+            <h3>Sensores Inteligentes</h3>
+            <p>
+                Medem umidade e nutrientes do solo em tempo real.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/irrigacao.jpg">
+            <h3>Irrigação de Precisão</h3>
+            <p>
+                Economiza água aplicando apenas o necessário para cada cultura.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/energia-solar.jpg">
+            <h3>Energia Solar</h3>
+            <p>
+                Reduz custos e emissões de carbono nas propriedades rurais.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<section class="videos">
-  <h2>Vídeos sobre Tecnologia no Agro</h2>
+<section id="videos">
+    <h2>🎥 Vídeos Educativos</h2>
 
-  <iframe width="400" height="250"
-  src="https://www.youtube.com/watch?v=7sKuBD-s8Dg">
-  </iframe>
+    <div class="video-container">
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/IjLJdM4Nq2Y"
+        allowfullscreen></iframe>
 
-  <iframe width="400" height="250"
-  src="https://www.youtube.com/embed/Fc0zk8qMtbw">
-  </iframe>
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/3e4QzPzGf1s"
+        allowfullscreen></iframe>
+    </div>
 </section>
 
-<section class="artigos">
-  <h2>Informações Científicas</h2>
+<section id="pesquisas">
+    <h2>📚 Pesquisas Científicas</h2>
 
-  <p>
-    “A integração da Inteligência Artificial com drones
-    permite uma gestão mais eficiente dos recursos naturais.”
-  </p>
+    <div class="artigo">
+        <h3>EMBRAPA</h3>
 
-  <p>
-    “A Agricultura 4.0 promove sustentabilidade e
-    redução do uso de insumos.”
-  </p>
+        <p>
+            "A agricultura de precisão permite otimizar o uso de insumos,
+            aumentar a produtividade e reduzir impactos ambientais."
+        </p>
+    </div>
+
+    <div class="artigo">
+        <h3>FAO - ONU</h3>
+
+        <p>
+            "Tecnologias digitais têm papel fundamental para garantir segurança
+            alimentar e sustentabilidade."
+        </p>
+    </div>
+
+    <div class="artigo">
+        <h3>Nature Sustainability</h3>
+
+        <p>
+            Estudos mostram que sensores inteligentes podem reduzir significativamente
+            o desperdício de água em áreas agrícolas.
+        </p>
+    </div>
 </section>
 
-<section class="ia">
-  <h2>Curiosidades com IA</h2>
+<section id="ia">
+    <h2>🤖 IA das Curiosidades</h2>
 
-  <button onclick="gerarCuriosidade()">
-    Gerar Curiosidade
-  </button>
+    <button onclick="gerarCuriosidade()">
+        Gerar Curiosidade
+    </button>
 
-  <p id="curiosidade"></p>
+    <div id="resultado"></div>
 </section>
 
 <footer>
-  <p>Projeto Agrinho 2026 - Tecnologia e Sustentabilidade</p>
+    <h3>Fontes Utilizadas</h3>
+
+    <ul>
+        <li>EMBRAPA - https://www.embrapa.br</li>
+        <li>FAO (ONU) - https://www.fao.org</li>
+        <li>Nature Sustainability - https://www.nature.com</li>
+        <li>Ministério da Agricultura - https://www.gov.br/agricultura</li>
+    </ul>
+
+    <p>Projeto desenvolvido para o Concurso Agrinho.</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
+```
