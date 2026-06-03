@@ -1,277 +1,181 @@
-{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
+// ===============================
+// IA AGRINHO
+// ===============================
+
+const curiosidades = [
+
+"🌱 A agricultura de precisão utiliza GPS, sensores e softwares para aplicar água e fertilizantes apenas onde são necessários.",
+
+"🚁 Drones conseguem identificar áreas com pragas antes que o problema se espalhe por toda a plantação.",
+
+"💧 Sistemas de irrigação inteligente podem reduzir significativamente o desperdício de água.",
+
+"☀️ A energia solar ajuda propriedades rurais a diminuir custos com eletricidade.",
+
+"📡 Sensores instalados no solo enviam informações em tempo real sobre umidade e nutrientes.",
+
+"🤖 A Inteligência Artificial pode prever doenças em plantas analisando imagens e dados climáticos.",
+
+"🌾 O Brasil é uma referência mundial em agricultura tropical graças a pesquisas científicas.",
+
+"🚜 Tratores modernos utilizam GPS para reduzir sobreposição de trabalho e economizar combustível.",
+
+"🌍 Tecnologias sustentáveis ajudam a produzir mais alimentos usando menos recursos naturais.",
+
+"📈 O uso de dados agrícolas permite tomadas de decisão mais rápidas e eficientes.",
+
+"🌱 Algumas fazendas utilizam estações meteorológicas próprias conectadas à internet.",
+
+"💦 A irrigação de precisão evita desperdício e melhora a produtividade.",
+
+"🔋 Sistemas de energia renovável reduzem as emissões de gases do efeito estufa.",
+
+"🌳 A integração lavoura-pecuária-floresta ajuda a recuperar áreas degradadas.",
+
+"🛰️ Satélites ajudam produtores a monitorar grandes áreas agrícolas.",
+
+"🐝 Tecnologias também auxiliam na preservação dos polinizadores.",
+
+"📱 Muitos agricultores controlam equipamentos diretamente pelo celular.",
+
+"🌦️ Previsões climáticas avançadas ajudam no planejamento das safras.",
+
+"🌎 Produzir mais sem desmatar é um dos principais objetivos do agro sustentável.",
+
+"🔬 Pesquisas científicas são fundamentais para desenvolver novas soluções para o campo."
+
+];
+
+// ===============================
+// BOTÃO DE CURIOSIDADES
+// ===============================
+
+function gerarCuriosidade() {
+
+    const numero =
+        Math.floor(Math.random() * curiosidades.length);
+
+    document.getElementById("resultado").innerHTML =
+        curiosidades[numero];
+
 }
 
-body{
-    background:#f5f7f5;
-    color:#222;
-    line-height:1.6;
-}
+// ===============================
+// CHATBOT AGRINHO
+// ===============================
 
-/* MENU */
+function responderPergunta() {
 
-.navbar{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(0,0,0,0.85);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-    z-index:1000;
-}
+    const pergunta = document
+        .getElementById("pergunta")
+        .value
+        .toLowerCase();
 
-.logo{
-    color:#4CAF50;
-    font-size:1.6rem;
-}
+    let resposta = "";
 
-.menu{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
+    if (
+        pergunta.includes("drone")
+    ) {
 
-.menu a{
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-}
+        resposta =
+        "🚁 Os drones monitoram plantações, detectam pragas e ajudam a reduzir desperdícios de insumos.";
 
-.menu a:hover{
-    color:#4CAF50;
-}
-
-/* HERO */
-
-.hero{
-    height:100vh;
-
-    background:
-    linear-gradient(rgba(0,0,0,.55),
-    rgba(0,0,0,.55)),
-    url("images/hero.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
-
-.hero-content{
-    max-width:800px;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:4rem;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:1.2rem;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    background:#4CAF50;
-    color:white;
-    text-decoration:none;
-    padding:15px 35px;
-    border-radius:50px;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    background:#388E3C;
-}
-
-/* SEÇÕES */
-
-section{
-    padding:100px 8%;
-}
-
-.titulo{
-    text-align:center;
-    font-size:2.5rem;
-    margin-bottom:50px;
-    color:#2e7d32;
-}
-
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    transition:0.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card h3{
-    padding:15px;
-    color:#2e7d32;
-}
-
-.card p{
-    padding:0 15px 20px;
-}
-
-/* ESTATÍSTICAS */
-
-.estatisticas{
-    background:#2e7d32;
-    color:white;
-}
-
-.estatisticas .titulo{
-    color:white;
-}
-
-.numeros{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.numero{
-    text-align:center;
-}
-
-.numero h3{
-    font-size:3rem;
-}
-
-/* PESQUISAS */
-
-.pesquisa{
-    background:white;
-    padding:25px;
-    margin-bottom:25px;
-    border-left:6px solid #4CAF50;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-/* VÍDEOS */
-
-.videos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
-    gap:25px;
-}
-
-.videos iframe{
-    width:100%;
-    height:300px;
-    border:none;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-/* IA */
-
-#curiosidades{
-    text-align:center;
-    background:#eef8ee;
-}
-
-.texto-ia{
-    margin-bottom:20px;
-}
-
-button{
-    background:#4CAF50;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:1rem;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#388E3C;
-}
-
-#resultado{
-    margin-top:30px;
-    padding:20px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
-    background:white;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    font-size:1.1rem;
-}
-
-/* RODAPÉ */
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-footer ul{
-    list-style:none;
-    margin:15px 0;
-}
-
-footer li{
-    margin:5px 0;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:2.5rem;
     }
 
-    .menu{
-        gap:12px;
-        font-size:0.9rem;
+    else if (
+        pergunta.includes("agua") ||
+        pergunta.includes("irrigação") ||
+        pergunta.includes("irrigacao")
+    ) {
+
+        resposta =
+        "💧 A irrigação inteligente utiliza sensores para aplicar apenas a quantidade necessária de água.";
+
     }
 
-    .videos{
-        grid-template-columns:1fr;
+    else if (
+        pergunta.includes("energia") ||
+        pergunta.includes("solar")
+    ) {
+
+        resposta =
+        "☀️ A energia solar reduz custos e gera eletricidade limpa para propriedades rurais.";
+
     }
 
-    .videos iframe{
-        height:220px;
+    else if (
+        pergunta.includes("sensor")
+    ) {
+
+        resposta =
+        "📡 Sensores coletam dados sobre solo, temperatura e umidade em tempo real.";
+
     }
+
+    else if (
+        pergunta.includes("ia") ||
+        pergunta.includes("inteligencia")
+    ) {
+
+        resposta =
+        "🤖 A Inteligência Artificial auxilia na previsão de pragas, doenças e produtividade.";
+
+    }
+
+    else if (
+        pergunta.includes("sustentabilidade")
+    ) {
+
+        resposta =
+        "🌱 Sustentabilidade significa produzir alimentos preservando recursos naturais para as próximas gerações.";
+
+    }
+
+    else {
+
+        resposta =
+        "😊 Ainda estou aprendendo! Tente perguntar sobre drones, sensores, energia solar, irrigação, IA ou sustentabilidade.";
+
+    }
+
+    document.getElementById("resposta").innerHTML =
+        resposta;
 
 }
+
+// ===============================
+// ANIMAÇÃO DOS NÚMEROS
+// ===============================
+
+const numeros =
+document.querySelectorAll(".numero h3");
+
+numeros.forEach(numero => {
+
+    const valorFinal =
+    parseInt(numero.innerText);
+
+    let contador = 0;
+
+    const atualizar = () => {
+
+        contador += Math.ceil(valorFinal / 50);
+
+        if(contador < valorFinal){
+
+            numero.innerText = contador + "%";
+
+            requestAnimationFrame(atualizar);
+
+        } else {
+
+            numero.innerText =
+            valorFinal + "%";
+
+        }
+
+    };
+
+    atualizar();
+
+});
